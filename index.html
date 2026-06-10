@@ -45,10 +45,10 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 
-  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s cubic-bezier(.21,.8,.23,.99), transform 0.8s cubic-bezier(.21,.8,.23,.99); }
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s cubic-bezier(.21,.8,.23,.99), transform 0.9s cubic-bezier(.21,.8,.23,.99); }
   .reveal.in { opacity: 1; transform: translateY(0); }
-  .reveal-delay-1 { transition-delay: .08s; }
-  .reveal-delay-2 { transition-delay: .16s; }
+  .reveal-delay-1 { transition-delay: .1s; }
+  .reveal-delay-2 { transition-delay: .2s; }
 
   .btn-magnetic { transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease; }
   .btn-magnetic:active { transform: scale(.98); }
@@ -58,8 +58,9 @@
     letter-spacing: 0.1em; cursor: pointer; padding: 6px 12px; border-radius: 9999px;
     border: 1px solid currentColor; transition: all .2s ease;
   }
-  .lang-switch:hover { background-color: currentColor; color: #EBE9E2; }
+  .lang-switch:hover { background-color: currentColor; }
   .lang-switch:hover .lang-separator { color: #EBE9E2; }
+  .lang-switch:hover { color: #EBE9E2; }
   .lang-active { font-weight: 700; }
 
   .whatsapp-float {
@@ -105,9 +106,9 @@
       <!-- ======================================================== -->
 
       <nav class="hidden md:flex items-center gap-8 text-[13px] tracking-widest uppercase font-body font-normal text-pillo">
-        <a href="#about" class="hover:underline underline-offset-4 transition-all" data-es="Nosotros" data-en="About">Nosotros</a>
-        <a href="#services" class="hover:underline underline-offset-4 transition-all" data-es="Servicios" data-en="Services">Servicios</a>
-        <a href="#work" class="hover:underline underline-offset-4 transition-all" data-es="Proyectos" data-en="Work">Proyectos</a>
+        <a href="#about" class="hover:underline underline-offset-4 transition-all">Nosotros</a>
+        <a href="#services" class="hover:underline underline-offset-4 transition-all">Servicios</a>
+        <a href="#work" class="hover:underline underline-offset-4 transition-all">Proyectos</a>
       </nav>
 
       <div class="flex items-center gap-4">
@@ -129,75 +130,106 @@
 
   <div id="mobile-menu" class="md:hidden hidden border-b border-pillo bg-bone backdrop-blur-xl">
     <div class="px-6 py-7 space-y-5 text-[14px] uppercase tracking-widest font-body font-normal text-pillo">
-      <a href="#about" class="block mobile-link" data-es="Nosotros" data-en="About">Nosotros</a>
-      <a href="#services" class="block mobile-link" data-es="Servicios" data-en="Services">Servicios</a>
-      <a href="#work" class="block mobile-link" data-es="Proyectos" data-en="Work">Proyectos</a>
-      <a href="https://wa.me/5359279148?text=Hola%20PILLO%2C%20vi%20su%20web%20y%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener" class="block pt-3" data-es="Iniciar proyecto por WhatsApp →" data-en="Start project via WhatsApp →">Iniciar proyecto por WhatsApp →</a>
+      <a href="#about" class="block mobile-link">Nosotros</a>
+      <a href="#services" class="block mobile-link">Servicios</a>
+      <a href="#work" class="block mobile-link">Proyectos</a>
+      <a href="https://wa.me/5359279148?text=Hola%20PILLO%2C%20vi%20su%20web%20y%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener" class="block pt-3">Iniciar proyecto por WhatsApp →</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<!-- HERO -->
-<section class="relative min-h-[90vh] flex items-center pt-28 md:pt-32 pb-20 overflow-hidden">
-  <div class="absolute right-[-40px] top-[130px] md:right-[-10px] md:top-[110px] select-none pointer-events-none" aria-hidden="true">
-    <span class="font-display font-bold text-[150px] md:text-[320px] lg:text-[420px] leading-none tracking-[-0.045em] text-pillo" style="opacity: 0.04;">PILLO</span>
-  </div>
+<!-- HERO SCROLLYTELLING -->
+<section class="relative">
   
-  <div class="relative max-w-7xl mx-auto px-6 md:px-10 lg:px-16 w-full">
-    <div class="max-w-[900px]">
-      <p class="reveal mono text-[11px] md:text-[12px] tracking-widest uppercase text-pillo mb-6 md:mb-8">
-        <span data-es="Estudio Creativo — Remoto" data-en="Creative Studio — Remote">Estudio Creativo — Remoto</span>
+  <!-- Block 1: Bone bg, Pillo text (CLEANED) -->
+  <div class="h-screen w-full bg-bone text-pillo flex flex-col items-center justify-center relative overflow-hidden">
+    <p class="reveal mono text-[11px] md:text-[12px] tracking-widest uppercase mb-8 absolute top-10 left-6 md:left-16">
+      <span data-es="Estudio Creativo — Remoto" data-en="Creative Studio — Remote">Estudio Creativo — Remoto</span>
+    </p>
+    <h1 class="reveal font-display font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-[-0.03em] text-center px-4 w-full">
+      <span data-es="Ser pillo" data-en="Being a PILLO">Ser pillo</span>
+    </h1>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <i data-lucide="arrow-down" class="w-6 h-6"></i>
+    </div>
+  </div>
+
+  <!-- Block 2: Pillo bg, Bone text -->
+  <div class="h-screen w-full bg-pillo text-bone flex items-center justify-center relative overflow-hidden">
+    <h1 class="reveal font-display font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-[-0.03em] text-center px-4 w-full">
+      <span data-es="es encontrar" data-en="is finding">es encontrar</span>
+    </h1>
+  </div>
+
+  <!-- Block 3: Bone bg, Pillo text -->
+  <div class="h-screen w-full bg-bone text-pillo flex items-center justify-center relative overflow-hidden">
+    <h1 class="reveal font-display font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-[-0.03em] text-center px-4 w-full">
+      <span data-es="oportunidades." data-en="opportunities.">oportunidades.</span>
+    </h1>
+  </div>
+
+  <!-- Block 4: Pillo bg, Bone text (CTA & Stats) -->
+  <div class="min-h-screen w-full bg-pillo text-bone flex flex-col items-center justify-center relative px-6 md:px-16 py-20">
+    <div class="max-w-[800px] text-center w-full">
+      <p class="reveal text-[22px] md:text-[28px] leading-relaxed font-body font-normal mb-10" data-es="Y nosotros ayudamos a las marcas a aprovecharlas." data-en="And we help brands seize them.">
+        Y nosotros ayudamos a las marcas a aprovecharlas.
       </p>
-
-      <h1 class="reveal font-display font-bold text-pillo leading-[0.86] tracking-[-0.022em] text-[54px] sm:text-[70px] md:text-[96px] lg:text-[116px]">
-        <span data-es="Design, Content" data-en="Design, Content">Design, Content</span><br>
-        <span data-es="&amp; Tecnología para" data-en="&amp; Technology for">&amp; Tecnología para</span><br>
-        <span data-es="Marcas que Quieren Crecer." data-en="Brands That Want to Grow.">Marcas que Quieren Crecer.</span>
-      </h1>
-
-      <div class="reveal reveal-delay-1 mt-8 md:mt-10 flex flex-col sm:flex-row gap-4">
-        <a href="https://wa.me/5359279148?text=Hola%20PILLO%2C%20vi%20su%20web%20y%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener" class="btn-magnetic inline-flex items-center justify-center gap-2 rounded-full bg-pillo text-bone px-8 py-4 text-[14px] font-normal tracking-wider uppercase hover:bg-[#9f1212] transition-colors">
+      <div class="reveal reveal-delay-1 flex flex-col sm:flex-row gap-4 justify-center mb-16">
+        <a href="https://wa.me/5359279148?text=Hola%20PILLO%2C%20vi%20su%20web%20y%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener" class="btn-magnetic inline-flex items-center justify-center gap-2 rounded-full bg-bone text-pillo px-8 py-4 text-[14px] font-normal tracking-wider uppercase hover:bg-white transition-colors">
           <i data-lucide="message-circle" class="w-5 h-5"></i>
           <span data-es="Hablemos por WhatsApp" data-en="Chat on WhatsApp">Hablemos por WhatsApp</span>
         </a>
-        <a href="#work" class="btn-magnetic inline-flex items-center justify-center rounded-full border border-pillo text-pillo px-8 py-4 text-[14px] font-normal tracking-wider uppercase hover:bg-pillo hover:text-bone transition-colors">
+        <a href="#work" class="btn-magnetic inline-flex items-center justify-center rounded-full border border-bone text-bone px-8 py-4 text-[14px] font-normal tracking-wider uppercase hover:bg-bone hover:text-pillo transition-colors">
           <span data-es="Ver Proyectos" data-en="View Projects">Ver Proyectos</span>
         </a>
       </div>
-    </div>
-
-    <div class="reveal reveal-delay-2 mt-16 md:mt-24 pt-6 border-t border-pillo flex flex-wrap items-center gap-6 text-[12px] md:text-[13px] tracking-widest uppercase font-body font-normal text-pillo">
-      <span data-es="3 Negocios Transformados" data-en="3 Businesses Transformed">3 Negocios Transformados</span>
-      <span class="text-pillo">•</span>
-      <span data-es="100% Compromiso" data-en="100% Commitment">100% Compromiso</span>
-      <span class="text-pillo hidden sm:inline">•</span>
-      <span class="hidden sm:inline-flex items-center gap-2 text-pillo"><span class="w-1.5 h-1.5 rounded-full bg-pillo"></span> <span data-es="Aceptando proyectos Q1 2026" data-en="Taking Q1 2026 projects">Aceptando proyectos Q1 2026</span></span>
+      
+      <!-- FIXED ALIGNMENT STATS -->
+      <div class="reveal reveal-delay-2 pt-6 border-t border-bone flex items-center justify-center gap-3 md:gap-6 text-[11px] md:text-[12px] tracking-widest uppercase font-body font-normal whitespace-nowrap">
+        <span data-es="3 Negocios Transformados" data-en="3 Businesses Transformed">3 Negocios Transformados</span>
+        <span class="opacity-50">•</span>
+        <span data-es="100% Compromiso" data-en="100% Commitment">100% Compromiso</span>
+        <span class="opacity-50 hidden sm:inline">•</span>
+        <span class="hidden sm:inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-bone"></span> <span data-es="Aceptando proyectos Q1 2026" data-en="Taking Q1 2026 projects">Aceptando proyectos Q1 2026</span></span>
+      </div>
     </div>
   </div>
+
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="bg-pillo relative">
+<section id="about" class="bg-bone relative">
   <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-20 md:py-28">
     <div class="grid lg:grid-cols-12 gap-10 items-start">
       <div class="lg:col-span-7 reveal">
-        <p class="mono text-[11px] tracking-widest uppercase text-bone mb-6" data-es="/ Sobre PILLO" data-en="/ About PILLO">/ Sobre PILLO</p>
-        <p class="font-display font-bold text-[34px] sm:text-[42px] md:text-[52px] leading-[1.05] tracking-[-0.018em] text-bone" data-es="No somos una agencia. Somos dos atrevidos con hambre, creatividad y tecnología." data-en="We're not an agency. We're two bold guys with hunger, creativity and technology.">
-          No somos una agencia. <br>
-          <span class="font-display font-semibold text-[28px] sm:text-[32px] md:text-[36px] leading-[1.1] mt-4 block">Somos dos atrevidos con hambre, creatividad y tecnología.</span>
-        </p>
+        <p class="mono text-[11px] tracking-widest uppercase text-pillo mb-6" data-es="/ Sobre PILLO" data-en="/ About PILLO">/ Sobre PILLO</p>
+        <h2 class="font-display font-bold text-[34px] sm:text-[42px] md:text-[52px] leading-[1.05] tracking-[-0.018em] text-pillo mb-8" data-es="No somos una agencia." data-en="We are not an agency.">
+          No somos una agencia.
+        </h2>
+        <div class="space-y-6 text-[17px] md:text-[18px] leading-relaxed font-body font-normal text-pillo max-w-[600px]">
+          <p data-es="PILLO es un estudio creativo que combina diseño, contenido y tecnología para impulsar negocios en crecimiento." data-en="PILLO is a creative studio that combines design, content, and technology to drive growing businesses.">
+            PILLO es un estudio creativo que combina diseño, contenido y tecnología para impulsar negocios en crecimiento.
+          </p>
+          <p data-es="Trabajamos con marcas que entienden que la presencia digital ya no es un complemento, sino una parte esencial de su negocio." data-en="We work with brands that understand digital presence is no longer a complement, but an essential part of their business.">
+            Trabajamos con marcas que entienden que la presencia digital ya no es un complemento, sino una parte esencial de su negocio.
+          </p>
+          <p data-es="Desde la estrategia de contenido hasta la automatización de procesos, desarrollamos soluciones que mejoran la forma en que las marcas comunican, operan y crecen." data-en="From content strategy to process automation, we develop solutions that improve how brands communicate, operate, and grow.">
+            Desde la estrategia de contenido hasta la automatización de procesos, desarrollamos soluciones que mejoran la forma en que las marcas comunican, operan y crecen.
+          </p>
+          <p class="font-body font-semibold text-[18px] md:text-[20px] text-pillo border-l-2 border-pillo pl-4 mt-8" data-es="Nuestro enfoque es simple: crear experiencias digitales funcionales, memorables y alineadas con los objetivos de cada cliente." data-en="Our approach is simple: creating functional, memorable digital experiences aligned with each client's objectives.">
+            Nuestro enfoque es simple:<br>
+            Crear experiencias digitales funcionales, memorables y alineadas con los objetivos de cada cliente.
+          </p>
+        </div>
       </div>
       <div class="lg:col-span-5 reveal reveal-delay-1">
-        <p class="text-bone text-[16px] leading-relaxed mb-8 font-body font-normal" data-es="Odiamos el teatro corporativo. Nos enfocamos en lo que importa: que tu negocio venda más, se vea mejor y funcione automático. Si buscas algo aburrido, sigue buscando. Si quieres resultados, hablemos." data-en="We hate corporate theater. We focus on what matters: your business selling more, looking better and running on autopilot. If you want boring, keep looking. If you want results, let's talk.">
-          Odiamos el teatro corporativo. Nos enfocamos en lo que importa: que tu negocio venda más, se vea mejor y funcione automático. Si buscas algo aburrido, sigue buscando. Si quieres resultados, hablemos.
-        </p>
-        <div class="grid grid-cols-2 gap-6 border-t border-bone pt-6">
-          <div><div class="font-display font-bold text-[36px] leading-none text-bone">2</div><div class="text-[11px] uppercase tracking-widest font-body font-normal text-bone mt-1" data-es="Fundadores" data-en="Founders">Fundadores</div></div>
-          <div><div class="font-display font-bold text-[36px] leading-none text-bone">3</div><div class="text-[11px] uppercase tracking-widest font-body font-normal text-bone mt-1" data-es="Negocios Transformados" data-en="Businesses Transformed">Negocios Transformados</div></div>
-          <div><div class="font-display font-bold text-[36px] leading-none text-bone">100%</div><div class="text-[11px] uppercase tracking-widest font-body font-normal text-bone mt-1" data-es="Compromiso" data-en="Commitment">Compromiso</div></div>
-          <div><div class="font-display font-bold text-[36px] leading-none text-bone">&lt;2h</div><div class="text-[11px] uppercase tracking-widest font-body font-normal text-bone mt-1" data-es="Respuesta" data-en="Response">Respuesta</div></div>
+        <div class="grid grid-cols-2 gap-6 border-t border-pillo pt-6">
+          <div><div class="font-display font-bold text-[36px] leading-none text-pillo">2</div><div class="text-[11px] uppercase tracking-widest font-body font-normal text-pillo mt-1" data-es="Fundadores" data-en="Founders">Fundadores</div></div>
+          <div><div class="font-display font-bold text-[36px] leading-none text-pillo">3</div><div class="text-[11px] uppercase tracking-widest font-body font-normal text-pillo mt-1" data-es="Negocios Transformados" data-en="Businesses Transformed">Negocios Transformados</div></div>
+          <div><div class="font-display font-bold text-[36px] leading-none text-pillo">100%</div><div class="text-[11px] uppercase tracking-widest font-body font-normal text-pillo mt-1" data-es="Compromiso" data-en="Commitment">Compromiso</div></div>
+          <div><div class="font-display font-bold text-[36px] leading-none text-pillo">&lt;2h</div><div class="text-[11px] uppercase tracking-widest font-body font-normal text-pillo mt-1" data-es="Respuesta" data-en="Response">Respuesta</div></div>
         </div>
       </div>
     </div>
@@ -205,16 +237,16 @@
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="bg-bone relative">
+<section id="services" class="bg-pillo text-bone relative">
   <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-20 md:py-28">
     <div class="reveal mb-12 md:mb-16">
-      <p class="mono text-[11px] tracking-widest uppercase text-pillo mb-4" data-es="/ Servicios" data-en="/ Services">/ Servicios</p>
-      <h2 class="font-display font-bold text-[44px] sm:text-[56px] md:text-[72px] leading-[0.90] tracking-[-0.022em] text-pillo" data-es="Lo que hacemos bien." data-en="What we do well.">Lo que hacemos<br>bien.</h2>
+      <p class="mono text-[11px] tracking-widest uppercase mb-4" data-es="/ Servicios" data-en="/ Services">/ Servicios</p>
+      <h2 class="font-display font-bold text-[44px] sm:text-[56px] md:text-[72px] leading-[0.90] tracking-[-0.022em]" data-es="Lo que hacemos bien." data-en="What we do well.">Lo que hacemos<br>bien.</h2>
     </div>
 
     <div class="grid md:grid-cols-3 gap-6 md:gap-8 reveal">
       <!-- Pilar 1 -->
-      <div class="border border-pillo rounded-[20px] p-8 hover:bg-pillo hover:text-bone transition-colors group">
+      <div class="border border-bone rounded-[20px] p-8 hover:bg-bone hover:text-pillo transition-all duration-300 group">
         <div class="mono text-[12px] font-normal mb-4">01</div>
         <h3 class="font-display font-bold text-[28px] md:text-[32px] mb-4" data-es="Brand & Content" data-en="Brand & Content">Brand & Content</h3>
         <ul class="space-y-3 text-[15px] leading-relaxed font-body font-normal">
@@ -224,7 +256,7 @@
         </ul>
       </div>
       <!-- Pilar 2 -->
-      <div class="border border-pillo rounded-[20px] p-8 hover:bg-pillo hover:text-bone transition-colors group">
+      <div class="border border-bone rounded-[20px] p-8 hover:bg-bone hover:text-pillo transition-all duration-300 group">
         <div class="mono text-[12px] font-normal mb-4">02</div>
         <h3 class="font-display font-bold text-[28px] md:text-[32px] mb-4" data-es="Digital & Tech" data-en="Digital & Tech">Digital & Tech</h3>
         <ul class="space-y-3 text-[15px] leading-relaxed font-body font-normal">
@@ -234,7 +266,7 @@
         </ul>
       </div>
       <!-- Pilar 3 -->
-      <div class="border border-pillo rounded-[20px] p-8 hover:bg-pillo hover:text-bone transition-colors group">
+      <div class="border border-bone rounded-[20px] p-8 hover:bg-bone hover:text-pillo transition-all duration-300 group">
         <div class="mono text-[12px] font-normal mb-4">03</div>
         <h3 class="font-display font-bold text-[28px] md:text-[32px] mb-4" data-es="Growth & Automation" data-en="Growth & Automation">Growth & Automation</h3>
         <ul class="space-y-3 text-[15px] leading-relaxed font-body font-normal">
@@ -248,12 +280,12 @@
 </section>
 
 <!-- WORK -->
-<section id="work" class="bg-pillo relative">
+<section id="work" class="bg-bone relative">
   <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-20 md:py-28">
     <div class="flex flex-wrap items-end justify-between gap-6 mb-12 md:mb-16 reveal">
       <div>
-        <p class="mono text-[11px] tracking-widest uppercase text-bone mb-4" data-es="/ Proyectos Seleccionados" data-en="/ Selected Work">/ Proyectos Seleccionados</p>
-        <h2 class="font-display font-bold text-[46px] sm:text-[60px] md:text-[78px] leading-[0.90] tracking-[-0.02em] text-bone" data-es="Impacto Real." data-en="Real Impact.">Impacto Real.</h2>
+        <p class="mono text-[11px] tracking-widest uppercase text-pillo mb-4" data-es="/ Proyectos Seleccionados — Cienfuegos" data-en="/ Selected Work — Cienfuegos">/ Proyectos Seleccionados — Cienfuegos</p>
+        <h2 class="font-display font-bold text-[46px] sm:text-[60px] md:text-[78px] leading-[0.90] tracking-[-0.02em] text-pillo" data-es="Impacto Real." data-en="Real Impact.">Impacto Real.</h2>
       </div>
     </div>
 
@@ -262,60 +294,61 @@
       <div class="project-img-wrap relative rounded-[20px] md:rounded-[28px] aspect-[16/10] md:aspect-[16/9]">
         <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2000&auto=format&fit=crop" alt="Gastrobar Villaverde" class="w-full h-full object-cover" loading="lazy">
         <div class="absolute top-5 left-5 md:top-7 md:left-7 flex flex-wrap gap-2 text-[11px] tracking-wider uppercase font-body font-normal text-bone">
-          <span class="project-meta-pill px-3 py-1.5 rounded-full bg-pillo">Gastronomía</span>
-          <span class="project-meta-pill px-3 py-1.5 rounded-full bg-pillo">2026</span>
+          <span class="project-meta-pill px-3 py-1.5 rounded-full bg-pillo text-bone">Gastronomía</span>
+          <span class="project-meta-pill px-3 py-1.5 rounded-full bg-pillo text-bone">Cienfuegos</span>
+          <span class="project-meta-pill px-3 py-1.5 rounded-full bg-pillo text-bone">2026</span>
         </div>
       </div>
       
       <div class="grid md:grid-cols-12 gap-6 md:gap-10 mt-7 md:mt-9">
         <div class="md:col-span-7">
-          <h3 class="font-display font-bold text-[34px] md:text-[44px] tracking-[-0.015em] text-bone">Gastrobar Villaverde</h3>
-          <p class="text-bone mt-3 text-[16px] leading-relaxed max-w-[590px] font-body font-normal" data-es="Comunicación de marca, creación de contenido y gestión de redes sociales. Estrategia de contenido para Instagram con enfoque en engagement y crecimiento de comunidad." data-en="Brand communication, content creation and social media management. Instagram content strategy focused on engagement and community growth.">
+          <h3 class="font-display font-bold text-[34px] md:text-[44px] tracking-[-0.015em] text-pillo">Gastrobar Villaverde</h3>
+          <p class="text-pillo mt-3 text-[16px] leading-relaxed max-w-[590px] font-body font-normal" data-es="Comunicación de marca, creación de contenido y gestión de redes sociales. Estrategia de contenido para Instagram con enfoque en engagement y crecimiento de comunidad." data-en="Brand communication, content creation and social media management. Instagram content strategy focused on engagement and community growth.">
             Comunicación de marca, creación de contenido y gestión de redes sociales. Estrategia de contenido para Instagram con enfoque en engagement y crecimiento de comunidad.
           </p>
-          <div class="mt-4 text-[12px] mono font-normal text-bone">
+          <div class="mt-4 text-[12px] mono font-normal text-pillo">
             <span data-es="Período: 7 abril — 10 junio 2026" data-en="Period: April 7 — June 10, 2026">Período: 7 abril — 10 junio 2026</span>
           </div>
         </div>
         
         <div class="md:col-span-5">
           <div class="grid grid-cols-2 gap-4 mb-6">
-            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-bone">20.2k</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-bone mt-1" data-es="Visualizaciones" data-en="Impressions">Visualizaciones</div></div>
-            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-bone">5.8k</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-bone mt-1" data-es="Alcance" data-en="Reach">Alcance</div></div>
-            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-bone">382</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-bone mt-1" data-es="Visitas perfil" data-en="Profile visits">Visitas perfil</div></div>
-            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-bone">+63</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-bone mt-1" data-es="Seguidores" data-en="Followers">Seguidores</div></div>
+            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-pillo">20.2k</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-pillo mt-1" data-es="Visualizaciones" data-en="Impressions">Visualizaciones</div></div>
+            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-pillo">5.8k</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-pillo mt-1" data-es="Alcance" data-en="Reach">Alcance</div></div>
+            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-pillo">382</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-pillo mt-1" data-es="Visitas perfil" data-en="Profile visits">Visitas perfil</div></div>
+            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-pillo">+63</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-pillo mt-1" data-es="Seguidores" data-en="Followers">Seguidores</div></div>
           </div>
           
           <!-- Animated Growth Chart -->
-          <div class="border border-bone rounded-[16px] p-5 bg-bone" style="background-color: rgba(235,233,226,0.05);">
+          <div class="border border-pillo rounded-[16px] p-5 bg-pillo" style="background-color: rgba(178,20,20,0.05);">
             <div class="flex items-center justify-between mb-4">
-              <span class="text-[11px] uppercase tracking-widest font-body font-normal text-bone" data-es="Crecimiento" data-en="Growth">Crecimiento</span>
-              <span class="text-[10px] mono font-normal text-bone">Instagram</span>
+              <span class="text-[11px] uppercase tracking-widest font-body font-normal text-pillo" data-es="Crecimiento" data-en="Growth">Crecimiento</span>
+              <span class="text-[10px] mono font-normal text-pillo">Instagram</span>
             </div>
             <svg class="w-full h-[140px] growth-chart" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid meet">
-              <line x1="0" y1="35" x2="400" y2="35" stroke="#EBE9E2" stroke-width="1" style="opacity: 0.15;"/>
-              <line x1="0" y1="70" x2="400" y2="70" stroke="#EBE9E2" stroke-width="1" style="opacity: 0.15;"/>
-              <line x1="0" y1="105" x2="400" y2="105" stroke="#EBE9E2" stroke-width="1" style="opacity: 0.15;"/>
+              <line x1="0" y1="35" x2="400" y2="35" stroke="#B21414" stroke-width="1" style="opacity: 0.15;"/>
+              <line x1="0" y1="70" x2="400" y2="70" stroke="#B21414" stroke-width="1" style="opacity: 0.15;"/>
+              <line x1="0" y1="105" x2="400" y2="105" stroke="#B21414" stroke-width="1" style="opacity: 0.15;"/>
               
               <g class="bar-group" data-value="9.8">
-                <rect class="bar" x="30" y="120" width="60" height="0" fill="#EBE9E2" style="opacity: 0.9;" rx="4"/>
-                <text class="bar-value" x="60" y="115" text-anchor="middle" fill="#EBE9E2" font-size="14" font-weight="600" opacity="0">+9.8%</text>
-                <text x="60" y="135" text-anchor="middle" fill="#EBE9E2" font-size="9" font-weight="400" style="opacity: 0.6;" data-es="Visual." data-en="Impr.">Visual.</text>
+                <rect class="bar" x="30" y="120" width="60" height="0" fill="#B21414" rx="4"/>
+                <text class="bar-value" x="60" y="115" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700" opacity="0">+9.8%</text>
+                <text x="60" y="135" text-anchor="middle" fill="#B21414" font-size="9" font-weight="400" data-es="Visual." data-en="Impr.">Visual.</text>
               </g>
               <g class="bar-group" data-value="7.5">
-                <rect class="bar" x="120" y="120" width="60" height="0" fill="#EBE9E2" style="opacity: 0.9;" rx="4"/>
-                <text class="bar-value" x="150" y="115" text-anchor="middle" fill="#EBE9E2" font-size="14" font-weight="600" opacity="0">+7.5%</text>
-                <text x="150" y="135" text-anchor="middle" fill="#EBE9E2" font-size="9" font-weight="400" style="opacity: 0.6;" data-es="Alcance" data-en="Reach">Alcance</text>
+                <rect class="bar" x="120" y="120" width="60" height="0" fill="#B21414" rx="4"/>
+                <text class="bar-value" x="150" y="115" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700" opacity="0">+7.5%</text>
+                <text x="150" y="135" text-anchor="middle" fill="#B21414" font-size="9" font-weight="400" data-es="Alcance" data-en="Reach">Alcance</text>
               </g>
               <g class="bar-group" data-value="8.8">
-                <rect class="bar" x="210" y="120" width="60" height="0" fill="#EBE9E2" style="opacity: 0.9;" rx="4"/>
-                <text class="bar-value" x="240" y="115" text-anchor="middle" fill="#EBE9E2" font-size="14" font-weight="600" opacity="0">+8.8%</text>
-                <text x="240" y="135" text-anchor="middle" fill="#EBE9E2" font-size="9" font-weight="400" style="opacity: 0.6;" data-es="Visitas" data-en="Visits">Visitas</text>
+                <rect class="bar" x="210" y="120" width="60" height="0" fill="#B21414" rx="4"/>
+                <text class="bar-value" x="240" y="115" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700" opacity="0">+8.8%</text>
+                <text x="240" y="135" text-anchor="middle" fill="#B21414" font-size="9" font-weight="400" data-es="Visitas" data-en="Visits">Visitas</text>
               </g>
               <g class="bar-group" data-value="23.5">
-                <rect class="bar" x="300" y="120" width="60" height="0" fill="#EBE9E2" rx="4"/>
-                <text class="bar-value" x="330" y="115" text-anchor="middle" fill="#EBE9E2" font-size="14" font-weight="600" opacity="0">+23.5%</text>
-                <text x="330" y="135" text-anchor="middle" fill="#EBE9E2" font-size="9" font-weight="400" style="opacity: 0.6;" data-es="Seguid." data-en="Follow.">Seguid.</text>
+                <rect class="bar" x="300" y="120" width="60" height="0" fill="#B21414" rx="4"/>
+                <text class="bar-value" x="330" y="115" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700" opacity="0">+23.5%</text>
+                <text x="330" y="135" text-anchor="middle" fill="#B21414" font-size="9" font-weight="400" data-es="Seguid." data-en="Follow.">Seguid.</text>
               </g>
             </svg>
           </div>
@@ -329,60 +362,61 @@
       <div class="project-img-wrap relative rounded-[20px] md:rounded-[28px] aspect-[16/10] md:aspect-[16/9]">
         <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=2000&auto=format&fit=crop" alt="Café La Rueda de la Fortuna" class="w-full h-full object-cover" loading="lazy">
         <div class="absolute top-5 left-5 md:top-7 md:left-7 flex flex-wrap gap-2 text-[11px] tracking-wider uppercase font-body font-normal text-bone">
-          <span class="project-meta-pill px-3 py-1.5 rounded-full bg-pillo" data-es="Cafetería" data-en="Coffee Shop">Cafetería</span>
-          <span class="project-meta-pill px-3 py-1.5 rounded-full bg-pillo" data-es="Branding" data-en="Branding">Branding</span>
+          <span class="project-meta-pill px-3 py-1.5 rounded-full bg-pillo text-bone" data-es="Cafetería" data-en="Coffee Shop">Cafetería</span>
+          <span class="project-meta-pill px-3 py-1.5 rounded-full bg-pillo text-bone">Cienfuegos</span>
+          <span class="project-meta-pill px-3 py-1.5 rounded-full bg-pillo text-bone" data-es="Branding" data-en="Branding">Branding</span>
         </div>
       </div>
       
       <div class="grid md:grid-cols-12 gap-6 md:gap-10 mt-7 md:mt-9">
         <div class="md:col-span-7">
-          <h3 class="font-display font-bold text-[34px] md:text-[44px] tracking-[-0.015em] text-bone">Café La Rueda de la Fortuna</h3>
-          <p class="text-bone mt-3 text-[16px] leading-relaxed max-w-[590px] font-body font-normal" data-es="Creación de contenido y desarrollo de marca. Fotografía de producto, identidad visual y estrategia de lanzamiento en redes sociales." data-en="Content creation and brand development. Product photography, visual identity and social media launch strategy.">
+          <h3 class="font-display font-bold text-[34px] md:text-[44px] tracking-[-0.015em] text-pillo">Café La Rueda de la Fortuna</h3>
+          <p class="text-pillo mt-3 text-[16px] leading-relaxed max-w-[590px] font-body font-normal" data-es="Creación de contenido y desarrollo de marca. Fotografía de producto, identidad visual y estrategia de lanzamiento en redes sociales." data-en="Content creation and brand development. Product photography, visual identity and social media launch strategy.">
             Creación de contenido y desarrollo de marca. Fotografía de producto, identidad visual y estrategia de lanzamiento en redes sociales.
           </p>
-          <div class="mt-4 text-[12px] mono font-normal text-bone">
+          <div class="mt-4 text-[12px] mono font-normal text-pillo">
             <span data-es="Período: 29 mayo — 10 junio 2026" data-en="Period: May 29 — June 10, 2026">Período: 29 mayo — 10 junio 2026</span>
           </div>
         </div>
         
         <div class="md:col-span-5">
           <div class="grid grid-cols-2 gap-4 mb-6">
-            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-bone">12.5k</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-bone mt-1" data-es="Visualizaciones" data-en="Impressions">Visualizaciones</div></div>
-            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-bone">3.8k</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-bone mt-1" data-es="Alcance" data-en="Reach">Alcance</div></div>
-            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-bone">261</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-bone mt-1" data-es="Visitas perfil" data-en="Profile visits">Visitas perfil</div></div>
-            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-bone">+111</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-bone mt-1" data-es="Seguidores" data-en="Followers">Seguidores</div></div>
+            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-pillo">12.5k</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-pillo mt-1" data-es="Visualizaciones" data-en="Impressions">Visualizaciones</div></div>
+            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-pillo">3.8k</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-pillo mt-1" data-es="Alcance" data-en="Reach">Alcance</div></div>
+            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-pillo">261</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-pillo mt-1" data-es="Visitas perfil" data-en="Profile visits">Visitas perfil</div></div>
+            <div><div class="font-display font-bold text-[28px] md:text-[32px] text-pillo">+111</div><div class="text-[10px] uppercase tracking-widest font-body font-normal text-pillo mt-1" data-es="Seguidores" data-en="Followers">Seguidores</div></div>
           </div>
           
           <!-- Animated Growth Chart -->
-          <div class="border border-bone rounded-[16px] p-5 bg-bone" style="background-color: rgba(235,233,226,0.05);">
+          <div class="border border-pillo rounded-[16px] p-5 bg-pillo" style="background-color: rgba(178,20,20,0.05);">
             <div class="flex items-center justify-between mb-4">
-              <span class="text-[11px] uppercase tracking-widest font-body font-normal text-bone" data-es="Crecimiento" data-en="Growth">Crecimiento</span>
-              <span class="text-[10px] mono font-normal text-bone">Instagram</span>
+              <span class="text-[11px] uppercase tracking-widest font-body font-normal text-pillo" data-es="Crecimiento" data-en="Growth">Crecimiento</span>
+              <span class="text-[10px] mono font-normal text-pillo">Instagram</span>
             </div>
             <svg class="w-full h-[140px] growth-chart" viewBox="0 0 400 140" preserveAspectRatio="xMidYMid meet">
-              <line x1="0" y1="35" x2="400" y2="35" stroke="#EBE9E2" stroke-width="1" style="opacity: 0.15;"/>
-              <line x1="0" y1="70" x2="400" y2="70" stroke="#EBE9E2" stroke-width="1" style="opacity: 0.15;"/>
-              <line x1="0" y1="105" x2="400" y2="105" stroke="#EBE9E2" stroke-width="1" style="opacity: 0.15;"/>
+              <line x1="0" y1="35" x2="400" y2="35" stroke="#B21414" stroke-width="1" style="opacity: 0.15;"/>
+              <line x1="0" y1="70" x2="400" y2="70" stroke="#B21414" stroke-width="1" style="opacity: 0.15;"/>
+              <line x1="0" y1="105" x2="400" y2="105" stroke="#B21414" stroke-width="1" style="opacity: 0.15;"/>
               
               <g class="bar-group" data-value="475">
-                <rect class="bar" x="30" y="120" width="60" height="0" fill="#EBE9E2" style="opacity: 0.9;" rx="4"/>
-                <text class="bar-value" x="60" y="115" text-anchor="middle" fill="#EBE9E2" font-size="14" font-weight="600" opacity="0">+475%</text>
-                <text x="60" y="135" text-anchor="middle" fill="#EBE9E2" font-size="9" font-weight="400" style="opacity: 0.6;" data-es="Visual." data-en="Impr.">Visual.</text>
+                <rect class="bar" x="30" y="120" width="60" height="0" fill="#B21414" rx="4"/>
+                <text class="bar-value" x="60" y="115" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700" opacity="0">+475%</text>
+                <text x="60" y="135" text-anchor="middle" fill="#B21414" font-size="9" font-weight="400" data-es="Visual." data-en="Impr.">Visual.</text>
               </g>
               <g class="bar-group" data-value="811">
-                <rect class="bar" x="120" y="120" width="60" height="0" fill="#EBE9E2" rx="4"/>
-                <text class="bar-value" x="150" y="115" text-anchor="middle" fill="#EBE9E2" font-size="14" font-weight="600" opacity="0">+811%</text>
-                <text x="150" y="135" text-anchor="middle" fill="#EBE9E2" font-size="9" font-weight="400" style="opacity: 0.6;" data-es="Alcance" data-en="Reach">Alcance</text>
+                <rect class="bar" x="120" y="120" width="60" height="0" fill="#B21414" rx="4"/>
+                <text class="bar-value" x="150" y="115" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700" opacity="0">+811%</text>
+                <text x="150" y="135" text-anchor="middle" fill="#B21414" font-size="9" font-weight="400" data-es="Alcance" data-en="Reach">Alcance</text>
               </g>
               <g class="bar-group" data-value="139">
-                <rect class="bar" x="210" y="120" width="60" height="0" fill="#EBE9E2" style="opacity: 0.9;" rx="4"/>
-                <text class="bar-value" x="240" y="115" text-anchor="middle" fill="#EBE9E2" font-size="14" font-weight="600" opacity="0">+139%</text>
-                <text x="240" y="135" text-anchor="middle" fill="#EBE9E2" font-size="9" font-weight="400" style="opacity: 0.6;" data-es="Visitas" data-en="Visits">Visitas</text>
+                <rect class="bar" x="210" y="120" width="60" height="0" fill="#B21414" rx="4"/>
+                <text class="bar-value" x="240" y="115" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700" opacity="0">+139%</text>
+                <text x="240" y="135" text-anchor="middle" fill="#B21414" font-size="9" font-weight="400" data-es="Visitas" data-en="Visits">Visitas</text>
               </g>
               <g class="bar-group" data-value="517">
-                <rect class="bar" x="300" y="120" width="60" height="0" fill="#EBE9E2" rx="4"/>
-                <text class="bar-value" x="330" y="115" text-anchor="middle" fill="#EBE9E2" font-size="14" font-weight="600" opacity="0">+517%</text>
-                <text x="330" y="135" text-anchor="middle" fill="#EBE9E2" font-size="9" font-weight="400" style="opacity: 0.6;" data-es="Seguid." data-en="Follow.">Seguid.</text>
+                <rect class="bar" x="300" y="120" width="60" height="0" fill="#B21414" rx="4"/>
+                <text class="bar-value" x="330" y="115" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700" opacity="0">+517%</text>
+                <text x="330" y="135" text-anchor="middle" fill="#B21414" font-size="9" font-weight="400" data-es="Seguid." data-en="Follow.">Seguid.</text>
               </g>
             </svg>
           </div>
@@ -393,34 +427,41 @@
 </section>
 
 <!-- PROCESS -->
-<section id="process" class="bg-bone border-t border-pillo">
+<section id="process" class="bg-pillo text-bone border-t border-bone">
   <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-20 md:py-28">
     <div class="grid lg:grid-cols-12 gap-10">
       <div class="lg:col-span-4 reveal">
-        <p class="mono text-[11px] tracking-widest uppercase text-pillo mb-4" data-es="/ Proceso" data-en="/ Process">/ Proceso</p>
-        <h2 class="font-display font-bold text-[44px] md:text-[56px] leading-[0.92] tracking-[-0.018em] text-pillo" data-es="Simple. Rápido. Efectivo." data-en="Simple. Fast. Effective.">Simple.<br>Rápido.<br>Efectivo.</h2>
+        <p class="mono text-[11px] tracking-widest uppercase mb-4" data-es="/ Proceso" data-en="/ Process">/ Proceso</p>
+        <h2 class="font-display font-bold text-[44px] md:text-[56px] leading-[0.92] tracking-[-0.018em]" data-es="Simple. Rápido. Efectivo." data-en="Simple. Fast. Effective.">Simple.<br>Rápido.<br>Efectivo.</h2>
       </div>
 
-      <div class="lg:col-span-8 space-y-0 border-t border-pillo reveal reveal-delay-1">
-        <div class="py-8 md:py-10 border-b border-pillo grid sm:grid-cols-[80px_1fr] gap-4">
-          <div class="mono text-[12px] font-normal text-pillo">01</div>
+      <div class="lg:col-span-8 space-y-0 border-t border-bone reveal reveal-delay-1">
+        <div class="py-8 md:py-10 border-b border-bone grid sm:grid-cols-[80px_1fr] gap-4">
+          <div class="mono text-[12px] font-normal">01</div>
           <div>
-            <h3 class="font-display font-bold text-[28px] md:text-[32px] tracking-[-0.015em] text-pillo" data-es="Estrategia" data-en="Strategy">Estrategia</h3>
-            <p class="text-pillo mt-2 max-w-[500px] leading-relaxed font-body font-normal" data-es="Sesión de 60 min. Definimos objetivos, audiencia y el plan de acción. Sin decks de 50 páginas." data-en="60-min session. We define goals, audience and action plan. No 50-page decks.">Sesión de 60 min. Definimos objetivos, audiencia y el plan de acción. Sin decks de 50 páginas.</p>
+            <h3 class="font-display font-bold text-[28px] md:text-[32px] tracking-[-0.015em]" data-es="Entendemos" data-en="We Understand">Entendemos</h3>
+            <p class="mt-2 max-w-[500px] leading-relaxed font-body font-normal" data-es="Conocemos tu negocio, tus objetivos y los retos que quieres resolver." data-en="We get to know your business, your objectives, and the challenges you want to solve.">Conocemos tu negocio, tus objetivos y los retos que quieres resolver.</p>
           </div>
         </div>
-        <div class="py-8 md:py-10 border-b border-pillo grid sm:grid-cols-[80px_1fr] gap-4">
-          <div class="mono text-[12px] font-normal text-pillo">02</div>
+        <div class="py-8 md:py-10 border-b border-bone grid sm:grid-cols-[80px_1fr] gap-4">
+          <div class="mono text-[12px] font-normal">02</div>
           <div>
-            <h3 class="font-display font-bold text-[28px] md:text-[32px] tracking-[-0.015em] text-pillo" data-es="Ejecución" data-en="Execution">Ejecución</h3>
-            <p class="text-pillo mt-2 max-w-[500px] leading-relaxed font-body font-normal" data-es="Diseñamos, desarrollamos y automatizamos. Iteraciones rápidas y comunicación directa." data-en="We design, develop and automate. Fast iterations and direct communication.">Diseñamos, desarrollamos y automatizamos. Iteraciones rápidas y comunicación directa.</p>
+            <h3 class="font-display font-bold text-[28px] md:text-[32px] tracking-[-0.015em]" data-es="Diseñamos la estrategia" data-en="We Design the Strategy">Diseñamos la estrategia</h3>
+            <p class="mt-2 max-w-[500px] leading-relaxed font-body font-normal" data-es="Definimos la mejor combinación de contenido, diseño y tecnología para alcanzar tus metas." data-en="We define the best combination of content, design, and technology to reach your goals.">Definimos la mejor combinación de contenido, diseño y tecnología para alcanzar tus metas.</p>
+          </div>
+        </div>
+        <div class="py-8 md:py-10 border-b border-bone grid sm:grid-cols-[80px_1fr] gap-4">
+          <div class="mono text-[12px] font-normal">03</div>
+          <div>
+            <h3 class="font-display font-bold text-[28px] md:text-[32px] tracking-[-0.015em]" data-es="Creamos" data-en="We Create">Creamos</h3>
+            <p class="mt-2 max-w-[500px] leading-relaxed font-body font-normal" data-es="Desarrollamos las piezas, sistemas y soluciones que darán vida al proyecto." data-en="We develop the pieces, systems, and solutions that will bring the project to life.">Desarrollamos las piezas, sistemas y soluciones que darán vida al proyecto.</p>
           </div>
         </div>
         <div class="py-8 md:py-10 grid sm:grid-cols-[80px_1fr] gap-4">
-          <div class="mono text-[12px] font-normal text-pillo">03</div>
+          <div class="mono text-[12px] font-normal">04</div>
           <div>
-            <h3 class="font-display font-bold text-[28px] md:text-[32px] tracking-[-0.015em] text-pillo" data-es="Impacto" data-en="Impact">Impacto</h3>
-            <p class="text-pillo mt-2 max-w-[500px] leading-relaxed font-body font-normal" data-es="Lanzamos, medimos y optimizamos. Te entregamos un reporte con números reales, no vanidades." data-en="We launch, measure and optimize. We deliver a report with real numbers, not vanity metrics.">Lanzamos, medimos y optimizamos. Te entregamos un reporte con números reales, no vanidades.</p>
+            <h3 class="font-display font-bold text-[28px] md:text-[32px] tracking-[-0.015em]" data-es="Optimizamos" data-en="We Optimize">Optimizamos</h3>
+            <p class="mt-2 max-w-[500px] leading-relaxed font-body font-normal" data-es="Medimos, ajustamos y mejoramos continuamente para generar mejores resultados." data-en="We measure, adjust, and continuously improve to generate better results.">Medimos, ajustamos y mejoramos continuamente para generar mejores resultados.</p>
           </div>
         </div>
       </div>
@@ -429,31 +470,31 @@
 </section>
 
 <!-- FINAL CTA -->
-<section class="bg-pillo relative overflow-hidden">
-  <div class="absolute inset-0" style="opacity: 0.06; background-image: radial-gradient(circle at 1px 1px, #EBE9E2 1px, transparent 0); background-size: 22px 22px;"></div>
+<section class="bg-bone relative overflow-hidden">
+  <div class="absolute inset-0" style="opacity: 0.06; background-image: radial-gradient(circle at 1px 1px, #B21414 1px, transparent 0); background-size: 22px 22px;"></div>
   <div class="relative max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-24 md:py-32 text-center">
-    <p class="reveal mono text-[11px] tracking-widest uppercase text-bone mb-6" data-es="¿Listo para empezar?" data-en="Ready to start?">¿Listo para empezar?</p>
-    <h2 class="reveal font-display font-bold text-bone leading-[0.88] tracking-[-0.022em] text-[52px] sm:text-[72px] md:text-[96px] lg:text-[110px]" data-es="¿Listo para ser un PILLO?" data-en="Ready to be a PILLO?">
+    <p class="reveal mono text-[11px] tracking-widest uppercase text-pillo mb-6" data-es="¿Listo para empezar?" data-en="Ready to start?">¿Listo para empezar?</p>
+    <h2 class="reveal font-display font-bold text-pillo leading-[0.88] tracking-[-0.022em] text-5xl sm:text-7xl md:text-8xl lg:text-9xl" data-es="¿Listo para ser un PILLO?" data-en="Ready to be a PILLO?">
       ¿Listo para ser<br>un PILLO?
     </h2>
     <div class="reveal reveal-delay-1 mt-10 flex flex-wrap justify-center gap-4">
-      <a href="https://wa.me/5359279148?text=Hola%20PILLO%2C%20vi%20su%20web%20y%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener" class="btn-magnetic inline-flex items-center gap-2 rounded-full bg-bone text-pillo px-8 py-4 text-[14px] font-normal uppercase tracking-wider hover:bg-white transition-colors">
+      <a href="https://wa.me/5359279148?text=Hola%20PILLO%2C%20vi%20su%20web%20y%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener" class="btn-magnetic inline-flex items-center gap-2 rounded-full bg-pillo text-bone px-8 py-4 text-[14px] font-normal uppercase tracking-wider hover:bg-[#981111] transition-colors">
         <i data-lucide="message-circle" class="w-5 h-5"></i>
         <span data-es="Iniciar proyecto por WhatsApp" data-en="Start project via WhatsApp">Iniciar proyecto por WhatsApp</span>
       </a>
     </div>
-    <p class="text-bone text-[13px] mt-6 font-body font-normal" data-es="Respuesta promedio: menos de 2 horas." data-en="Average response: under 2 hours.">Respuesta promedio: menos de 2 horas.</p>
+    <p class="text-pillo text-[13px] mt-6 font-body font-normal" data-es="Respuesta promedio: menos de 2 horas." data-en="Average response: under 2 hours.">Respuesta promedio: menos de 2 horas.</p>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-pillo border-t border-bone">
-  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-[12px] tracking-widest uppercase font-body font-normal text-bone">
+<footer class="bg-bone border-t border-pillo">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-[12px] tracking-widest uppercase font-body font-normal text-pillo">
     
     <!-- === PEGA TU LOGO SVG AQUÍ TAMBIÉN (Versión Footer) === -->
     <div class="flex items-center gap-3">
-      <div class="w-[28px] h-[28px] rounded-full bg-bone flex items-center justify-center">
-        <span class="font-display font-bold text-pillo text-[14px]">P</span>
+      <div class="w-[28px] h-[28px] rounded-full bg-pillo flex items-center justify-center">
+        <span class="font-display font-bold text-bone text-[14px]">P</span>
       </div>
       <span>© <span id="yr"></span> PILLO | estudio creativo</span>
     </div>
@@ -525,7 +566,7 @@
   // Scroll reveal
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
   // Chart animation (Dynamic scaling per chart)
